@@ -63,3 +63,49 @@ if('IntersectionObserver' in window){
   },{threshold:.12});
   items.forEach(item=>observer.observe(item));
 }else items.forEach(item=>item.classList.add('show'));
+const galleryInput=document.getElementById('galleryInput');
+const customGallery=document.getElementById('customGallery');
+const galleryKey='uniqueFitnessCustomGallery';
+
+function getGalleryImages(){
+  try{return JSON.parse(localStorage.getItem(galleryKey)||'[]')}catch(e){return[]}
+}
+function saveGalleryImages(items){
+  try{localStorage.setItem(galleryKey,JSON.stringify(items));return true}catch(e){alert('Storage is full. Please remove an old gallery image and try again.');return false}
+}
+function renderCustomGallery(){
+  if(!customGallery)return;
+  const items=getGalleryImages();
+  customGallery.innerHTML=items.map((src,i)=>'<figure><img src="'+src+'" alt="Added gym photo"><button type="button" data-gallery-index="'+i+'" aria-label="Remove image">×</button></figure>').join('');
+}
+if(galleryInput){
+  galleryInput.onchange=async()=>{
+    const files=[...galleryInput.files].filter(file=>file.type.startsWith('image/'));
+    const current=getGalleryImages();
+    for(const file of files){
+      const src=await new Promise(resolve=>{
+        const img=new Image(),reader=new FileReader();
+        reader.onload=()=>{img.onload=()=>{
+          const max=1400,scale=Math.min(1,max/img.width),canvas=document.createElement('canvas');
+          canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);
+          canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+          resolve(canvas.toDataURL('image/jpeg',.82));
+        };img.src=reader.result};reader.readAsDataURL(file);
+      });
+      current.push(src);
+    }
+    if(saveGalleryImages(current))renderCustomGallery();
+    galleryInput.value='';
+  };
+}
+if(customGallery){
+  customGallery.onclick=e=>{
+    const btn=e.target.closest('[data-gallery-index]');
+    if(!btn)return;
+    const items=getGalleryImages();
+    items.splice(Number(btn.dataset.galleryIndex),1);
+    saveGalleryImages(items);
+    renderCustomGallery();
+  };
+  renderCustomGallery();
+}
