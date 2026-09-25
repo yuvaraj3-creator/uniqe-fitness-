@@ -15,8 +15,7 @@ button,input,textarea{font:inherit}
 /* Navigation */
 .nav{position:sticky;top:0;z-index:99;background:rgba(7,7,7,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08)}
 .navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{font-size:23px;font-weight:900;letter-spacing:-1.5px}
-.logo span,.orange{color:var(--orange)}
+.logo{display:flex;flex-direction:column;justify-content:center;line-height:.78;font-family:Impact,"Arial Narrow",Haettenschweiler,sans-serif;font-weight:900;letter-spacing:-1px;text-transform:uppercase;filter:drop-shadow(0 0 5px rgba(255,255,255,.2))}.logo-line{display:block;color:#f4f4f4}.logo-top{font-size:21px;letter-spacing:-1.2px}.logo-bottom{font-size:15px;letter-spacing:-.4px;margin-top:3px}.logo-accent{color:var(--orange);filter:drop-shadow(0 0 4px rgba(255,106,0,.45))}.orange{color:var(--orange)}
 .links{display:flex;align-items:center;gap:27px;color:#aaa;font-size:12px;font-weight:800;letter-spacing:.2px;position:absolute;left:50%;transform:translateX(-50%)}
 .links a{position:relative;transition:.25s}
 .links a:after{content:"";position:absolute;left:0;right:100%;bottom:-9px;height:2px;background:var(--orange);transition:.25s}
