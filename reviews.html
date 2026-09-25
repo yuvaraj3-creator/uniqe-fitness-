@@ -11,34 +11,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-.public-source-note{margin:0 0 16px;padding:13px 16px;border:1px solid #242424;background:#0d0d0d;color:#777;font-size:11px;line-height:1.6}
-.review-summary{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;margin-bottom:18px}
-.rating-box,.review-card{background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid #242424}
-.rating-box{padding:35px;display:flex;align-items:center;gap:25px}
-.rating-number{font-size:64px;line-height:1;font-weight:900;letter-spacing:-5px}
-.stars{color:var(--orange);letter-spacing:3px;font-size:19px}
-.rating-source{color:#777;font-size:11px;margin-top:5px}
-.review-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.review-card{padding:26px;min-height:190px;position:relative}
+.review-summary{margin-bottom:42px}
+.rating-box{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.012));border:1px solid #242424;padding:38px 42px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.rating-number{font-size:68px;line-height:1;font-weight:900;letter-spacing:-5px}
+.stars{color:var(--orange);letter-spacing:3px;font-size:20px}
+.rating-source{color:#777;font-size:11px;margin-top:7px}
+.google-btn{white-space:nowrap}
+.google-reviews{margin-top:48px}
+.google-reviews h2,.review-form h2,.user-reviews h2{font-size:34px;letter-spacing:-2px;margin-bottom:10px}
+.section-note{color:#777;font-size:12px;margin-bottom:24px}
+.review-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review-card{background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid #242424;padding:27px;min-height:215px;display:flex;flex-direction:column}
 .review-card .stars{font-size:14px}
-.review-card p{color:#aaa;font-size:13px;line-height:1.7;margin:18px 0}
-.review-card small{color:#666;font-size:10px;text-transform:uppercase;letter-spacing:1px}
-.review-form{margin-top:55px;max-width:760px}
-.review-form h2{font-size:34px;letter-spacing:-2px;margin-bottom:8px}
+.review-card p{color:#aaa;font-size:14px;line-height:1.75;margin:17px 0 auto}
+.review-card small{color:#666;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:18px}
+.review-form{margin-top:60px;max-width:760px}
 .review-form>p{color:#777;font-size:13px;margin-bottom:24px}
 .rating-select{display:flex;gap:8px;flex-direction:row-reverse;justify-content:flex-end;margin-bottom:16px}
 .rating-select input{display:none}
 .rating-select label{cursor:pointer;color:#444;font-size:25px;transition:.2s}
 .rating-select label:hover,.rating-select label:hover~label,.rating-select input:checked~label{color:var(--orange)}
-.user-reviews{margin-top:55px}
-.user-reviews h2{font-size:34px;letter-spacing:-2px;margin-bottom:25px}
+.user-reviews{margin-top:60px}
 .user-review-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .user-review{background:#101010;border:1px solid #242424;padding:25px}
 .user-review-top{display:flex;justify-content:space-between;gap:15px}
 .user-review-name{font-weight:800}.user-review-date{color:#666;font-size:10px}
 .user-review-text{color:#999;font-size:13px;margin-top:13px}
 .empty-reviews{color:#666;font-size:13px;padding:25px;border:1px dashed #292929}
-@media(max-width:850px){.review-summary{grid-template-columns:1fr}.review-highlights,.user-review-list{grid-template-columns:1fr}}
+@media(max-width:850px){.rating-box{padding:30px;display:block}.google-btn{margin-top:20px}.review-highlights,.user-review-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -70,13 +70,18 @@
 <div>
 <div class="rating-number">4.7</div>
 <div class="stars">★★★★★</div>
-<div class="rating-source">Current Google listing snapshot · 412 reviews</div>
+<div class="rating-source">Google listing · 412 reviews</div>
+</div>
+<a class="btn google-btn" href="https://www.google.com/maps/search/?api=1&query=Unique+Fitness+Tondiarpet+Chennai" target="_blank" rel="noopener">View Google Reviews →</a>
 </div>
 </div>
-<div class="public-source-note">Public review highlights found online for Unique Fitness, Tondiarpet. Wording below is paraphrased from the current listing to avoid presenting copied text as original website content.</div><div class="review-highlights">
-<article class="review-card"><div class="stars">★★★★★</div><p>Customers highlight the quality of the equipment and a smooth workout experience.</p><small>Customer highlight · Google listing</small></article>
-<article class="review-card"><div class="stars">★★★★★</div><p>Review feedback mentions a motivating atmosphere that encourages members to improve.</p><small>Customer highlight · Google listing</small></article>
-<article class="review-card"><div class="stars">★★★★★</div><p>Customers also mention the gym's atmosphere and hygienic environment positively.</p><small>Customer highlight · Google listing</small></article>
+<div class="google-reviews">
+<h2>Google Reviews</h2>
+<p class="section-note">Recent review highlights from the public Google listing for Unique Fitness, Tondiarpet.</p>
+<div class="review-highlights">
+<article class="review-card"><div class="stars">★★★★★</div><p>“Great place to work out on high quality brand equipments with hassle free.”</p><small>Google review · Public listing</small></article>
+<article class="review-card"><div class="stars">★★★★★</div><p>“The gym's atmosphere and ambience push you to make yourself better.”</p><small>Google review · Public listing</small></article>
+<article class="review-card"><div class="stars">★★★★★</div><p>Another public review praises the gym's ambience and hygienic environment.</p><small>Google review · Public listing</small></article>
 </div>
 </div>
 
