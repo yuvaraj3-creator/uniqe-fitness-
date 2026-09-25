@@ -114,7 +114,7 @@ main{position:relative}
 
 /* Floating + footer */
 .float{position:fixed;right:22px;bottom:22px;background:#25d366;color:#fff;width:57px;height:57px;border-radius:50%;display:grid;place-items:center;z-index:90;font-size:21px;box-shadow:0 12px 35px rgba(0,0,0,.55);transition:.25s}
-.float:hover{transform:translateY(-4px) scale(1.04)}
+.float svg{width:31px;height:31px;display:block}.float:hover{transform:translateY(-4px) scale(1.04)}
 footer{border-top:1px solid #222;padding:32px 0;color:#666;font-size:11px;background:#050505}
 .foot{display:flex;justify-content:space-between;gap:20px}
 
