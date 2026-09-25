@@ -17,7 +17,7 @@ button,input,textarea{font:inherit}
 .navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .logo{font-size:23px;font-weight:900;letter-spacing:-1.5px}
 .logo span,.orange{color:var(--orange)}
-.links{display:flex;align-items:center;gap:27px;color:#aaa;font-size:12px;font-weight:800;letter-spacing:.2px}
+.links{display:flex;align-items:center;gap:27px;color:#aaa;font-size:12px;font-weight:800;letter-spacing:.2px;position:absolute;left:50%;transform:translateX(-50%)}
 .links a{position:relative;transition:.25s}
 .links a:after{content:"";position:absolute;left:0;right:100%;bottom:-9px;height:2px;background:var(--orange);transition:.25s}
 .links a:hover{color:#fff}.links a:hover:after{right:0}
