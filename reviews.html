@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Unique Fitness customer reviews and feedback.">
+<title>Reviews | Unique Fitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.review-summary{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;margin-bottom:18px}
+.rating-box,.review-card{background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid #242424}
+.rating-box{padding:35px;display:flex;align-items:center;gap:25px}
+.rating-number{font-size:64px;line-height:1;font-weight:900;letter-spacing:-5px}
+.stars{color:var(--orange);letter-spacing:3px;font-size:19px}
+.rating-source{color:#777;font-size:11px;margin-top:5px}
+.review-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.review-card{padding:26px;min-height:190px;position:relative}
+.review-card .stars{font-size:14px}
+.review-card p{color:#aaa;font-size:13px;line-height:1.7;margin:18px 0}
+.review-card small{color:#666;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.review-form{margin-top:55px;max-width:760px}
+.review-form h2{font-size:34px;letter-spacing:-2px;margin-bottom:8px}
+.review-form>p{color:#777;font-size:13px;margin-bottom:24px}
+.rating-select{display:flex;gap:8px;flex-direction:row-reverse;justify-content:flex-end;margin-bottom:16px}
+.rating-select input{display:none}
+.rating-select label{cursor:pointer;color:#444;font-size:25px;transition:.2s}
+.rating-select label:hover,.rating-select label:hover~label,.rating-select input:checked~label{color:var(--orange)}
+.user-reviews{margin-top:55px}
+.user-reviews h2{font-size:34px;letter-spacing:-2px;margin-bottom:25px}
+.user-review-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.user-review{background:#101010;border:1px solid #242424;padding:25px}
+.user-review-top{display:flex;justify-content:space-between;gap:15px}
+.user-review-name{font-weight:800}.user-review-date{color:#666;font-size:10px}
+.user-review-text{color:#999;font-size:13px;margin-top:13px}
+.empty-reviews{color:#666;font-size:13px;padding:25px;border:1px dashed #292929}
+@media(max-width:850px){.review-summary{grid-template-columns:1fr}.review-highlights,.user-review-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="navin container">
+<a class="logo" href="index.html">UNIQUE<span>.</span></a>
+<nav class="links">
+<a href="programs.html">Programs</a><a href="about.html">About</a><a href="membership.html">Membership</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</nav>
+<a class="btn" href="tel:+918778790980">Call Now</a>
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="programs.html">Programs</a><a href="about.html">About</a><a href="membership.html">Membership</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+</header>
+
+<main>
+<section class="section">
+<div class="container">
+<div class="head">
+<div class="kicker">Reviews</div>
+<h1>What members say.</h1>
+<p class="muted">Customer feedback and a simple way for new visitors to leave their own review.</p>
+</div>
+
+<div class="review-summary">
+<div class="rating-box">
+<div>
+<div class="rating-number">4.7</div>
+<div class="stars">★★★★★</div>
+<div class="rating-source">Current Google listing snapshot · 412 reviews</div>
+</div>
+</div>
+<div class="review-highlights">
+<article class="review-card"><div class="stars">★★★★★</div><p>Customers highlight the quality of the equipment and a smooth workout experience.</p><small>Customer highlight · Google listing</small></article>
+<article class="review-card"><div class="stars">★★★★★</div><p>Review feedback mentions a motivating atmosphere that encourages members to improve.</p><small>Customer highlight · Google listing</small></article>
+<article class="review-card"><div class="stars">★★★★★</div><p>Customers also mention the gym's atmosphere and hygienic environment positively.</p><small>Customer highlight · Google listing</small></article>
+</div>
+</div>
+
+<div class="review-form form">
+<h2>Add your review</h2>
+<p>Your review is saved in this browser and will remain after refresh.</p>
+<form id="reviewForm">
+<div class="field"><label for="reviewName">Your name</label><input id="reviewName" required maxlength="60" placeholder="Your name"></div>
+<div class="field">
+<label>Your rating</label>
+<div class="rating-select">
+<input id="r5" name="rating" type="radio" value="5" required><label for="r5">★</label>
+<input id="r4" name="rating" type="radio" value="4"><label for="r4">★</label>
+<input id="r3" name="rating" type="radio" value="3"><label for="r3">★</label>
+<input id="r2" name="rating" type="radio" value="2"><label for="r2">★</label>
+<input id="r1" name="rating" type="radio" value="1"><label for="r1">★</label>
+</div>
+</div>
+<div class="field"><label for="reviewText">Your review</label><textarea id="reviewText" required maxlength="500" placeholder="Share your experience..."></textarea></div>
+<button class="btn" type="submit">Publish Review →</button>
+</form>
+</div>
+
+<div class="user-reviews">
+<h2>Member feedback</h2>
+<div class="user-review-list" id="userReviewList"></div>
+</div>
+</div>
+</section>
+</main>
+
+<a class="float" href="https://wa.me/918778790980" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="white" d="M19.11 17.19c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.6-.66 1.82-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"/><path fill="white" d="M16.02 5.33a10.67 10.67 0 0 0-9.05 16.32L5.5 26.5l4.99-1.42a10.67 10.67 0 1 0 5.53-19.75zm0 19.42a8.73 8.73 0 0 1-4.45-1.22l-.32-.19-2.96.84.86-2.88-.21-.33a8.73 8.73 0 1 1 7.08 3.78z"/></svg>
+</a>
+<footer><div class="container foot"><span>© 2026 Unique Fitness · Tondiarpet, Chennai</span><span>Train Different.</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
