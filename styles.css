@@ -155,3 +155,5 @@ main>.section:first-child .head h1{font-size:clamp(52px,8vw,88px)}
   .foot span{display:block;margin:6px 0}
   .float{right:16px;bottom:16px}
 }
+
+.contact-layout{grid-template-columns:1fr 1fr}.contact-layout+.map{margin-top:18px}@media(max-width:850px){.contact-layout{grid-template-columns:1fr}}
